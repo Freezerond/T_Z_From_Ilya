@@ -1,0 +1,14 @@
+{% extends 'horoscope_app/base.html' %}
+
+{% block content %}
+<center><h1>{{title}}</h1></center>
+
+<ul>
+    {% for p in posts %}
+    <li>
+        <h2><a href="{{ p.get_absolute_url }}">{{p.title}}</a></h2>
+    </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
